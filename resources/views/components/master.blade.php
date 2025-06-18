@@ -8,7 +8,31 @@
     <title>Police App</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/logopolice.jpg')}}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css')}}" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css" /> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css" />
+<style>
+    .swal2-cancel {
+            color: #fff !important;
+            background-color: #dc3545 !important;
+            border: none !important;
+        }
+
+        .swal2-cancel:hover {
+            background-color: #c82333 !important;
+        }
+
+        .swal2-confirm {
+            color: #fff !important;
+            background-color: #0d6efd !important;
+            /* warna biru Bootstrap */
+            border: none !important;
+        }
+
+        .swal2-confirm:hover {
+            background-color: #0b5ed7 !important;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -45,9 +69,9 @@
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js')}}"></script>
     <!-- solar icons -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    
+
     <script src="https://cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
