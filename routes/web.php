@@ -6,6 +6,7 @@ use App\Http\Controllers\VehicleController;
 use GuzzleHttp\Middleware;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OfficerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthController::class, 'index'])->name('login');
 Route::get('/register', [AuthController::class, 'registerPage']);
- 
+
+
 Route::group(['prefix' => 'panel-control'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/vehicles', [DashboardController::class, 'vehicles']);
     Route::post('/vehicles', [VehicleController::class, 'store'])->name('vehicles.store');
-    
+    //officer
+    Route::get('/officers', [OfficerController::class, 'index']);
+    Route::post('/officers', [OfficerController::class, 'store'])->name('officers.officer');
+
 });
